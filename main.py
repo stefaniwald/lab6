@@ -5,7 +5,7 @@ def menu():
     print('2. Decode ')
     print('3. Quit')
 
-def encode(password):
+def encode(password):       # encodes password by shifting each number up by 3
     new_pass = ''
     for num in password:
         new_pass += str(int(num) + 3)
