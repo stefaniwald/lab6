@@ -8,7 +8,11 @@ def menu():
 def encode(password):       # encodes password by shifting each number up by 3
     new_pass = ''
     for num in password:
-        new_pass += str(int(num) + 3)
+        if int(num) < 7:
+            new_pass += str(int(num) + 3)
+        else:
+            new_pass += str(int(num) - 7)
+
     return new_pass
 
 if __name__ == "__main__":
