@@ -17,6 +17,16 @@ def encode(password):       # encodes password by shifting each number up by 3
     return new_pass
 
 
+def decode(encoded_pass):
+    og_pass = ''
+    for num in encoded_pass:
+        if int(num) > 2:
+            og_pass += str(int(num) - 3)
+        else:
+            og_pass += str(int(num) + 7)
+    return og_pass
+
+
 if __name__ == "__main__":
     while True:
         menu()
